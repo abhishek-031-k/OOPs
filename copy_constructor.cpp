@@ -12,9 +12,11 @@ student(string name, double cgpa){
    *cgpaptr = cgpa;
 }
 
+
 student(student &obj){
     this->name = obj.name;
-    this->cgpaptr = obj.cgpaptr;
+    cgpaptr = new double;
+    *cgpaptr = *obj.cgpaptr;
 }
 
 void getInfo(){
@@ -32,5 +34,6 @@ int main(){
    s1.getInfo();
    *(s2.cgpaptr) = 9.2;
    s1.getInfo();
+   s2.getInfo();
     return 0;
 }
