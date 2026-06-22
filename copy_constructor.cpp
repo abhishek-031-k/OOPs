@@ -1,37 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class teacher{
-  public: 
-  string name;
-  string subject;
-  string language;
-  int salary;
+class student{
+public:
+string name;
+double* cgpaptr;
 
-  teacher( string name, string subject, string language, int salary){
-     this->name = name;
-     this->subject = subject;
-     this->language = language;
-     this->salary;
-  }
-  void getInfo(){
-    cout<<"name: " <<name<<endl;
-    cout<<"subject: "<<subject<<endl;
-  }
-  teacher(teacher &obj){
-    cout<<"I am custom copy constructor"<<endl;
-   this->name = obj.name;
-   this->subject = obj.subject;
-   this->language = obj.language;
-   this->salary = obj.salary;
-  }
+student(string name, double cgpa){
+    this->name = name;
+   cgpaptr = new double;
+   *cgpaptr = cgpa;
+}
+
+student(student &obj){
+    this->name = obj.name;
+    this->cgpaptr = obj.cgpaptr;
+}
+
+void getInfo(){
+    cout<<"name: "<<name<<endl;
+    cout<<"cgpa: "<<*cgpaptr<<endl;
+}
 };
 
 
 int main(){
 
-    teacher t1("abhishek", "computerScience", "c++", 10000000);
-    teacher t2(t1);
-    t2.getInfo();
+   student s1("xyz", 8.00);
+   student s2(s1);
+  
+   s1.getInfo();
+   *(s2.cgpaptr) = 9.2;
+   s1.getInfo();
     return 0;
 }
