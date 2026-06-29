@@ -17,7 +17,7 @@ class teacher : public person{
     string subject;
     double salary;
 };
-
+ 
 
 int main(){
   student s1;

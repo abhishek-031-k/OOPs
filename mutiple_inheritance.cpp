@@ -23,5 +23,6 @@ int main(){
   t1.subject = "abc";
   cout<<t1.name<<endl;
   cout<<t1.subject<<endl;
+  
     return 0;
 }
