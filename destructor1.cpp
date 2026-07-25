@@ -12,7 +12,7 @@ class Student{
         cout<<"constructor is called"<<endl;
     }
     ~Student(){
-        cout<<"Deconstructor is called"<<endl;
+        cout<<"Destructor is called"<<endl;
     }
 };
 
