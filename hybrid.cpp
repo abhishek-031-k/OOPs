@@ -9,14 +9,14 @@ class base{
     }
 };
 
-class derivedclass1 : public base{
+class derivedclass1 : virtual public base{
     public: 
     derivedclass1(){
         cout<<"derived_class1 constructor"<<endl;
     }
 };
 
-class derivedclass2 : public base{
+class derivedclass2 : virtual public base{
     public:
     derivedclass2(){
         cout<<"derived_class2 constructor"<<endl;
