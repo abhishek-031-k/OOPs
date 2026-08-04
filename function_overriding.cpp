@@ -4,7 +4,7 @@ using namespace std;
 class parent{
 public:
 
-void getInfo(){
+ void getInfo(){
     cout<<"parent class"<<endl;
 }
 };
